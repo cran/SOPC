@@ -1,0 +1,12 @@
+#¡¯ @importFrom np b.star
+
+importFrom(stats, cor)
+importFrom(stats, cov)
+importFrom(elasticnet, spca)
+export(OPC)
+
+export(PC)
+
+export(SOPC)
+
+export(SPC)

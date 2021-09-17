@@ -1,0 +1,17 @@
+32e904bc1ede1b74b6266df4aad26c17 *DESCRIPTION
+bb428ee90becd397d311a1fef7eb2d49 *LICENSE
+a32e9a1a01ce20503ad4e05de9e525ec *NAMESPACE
+23e24cdde33b0b5b71a64d88abac36a0 *R/OPC.R
+e000f841e672e14b2de2503ad689278e *R/PC.R
+3294e6970cdb45c0c5a7e587bf65bc30 *R/SOPC.R
+31e21de6df4d48ecff8fd8af793a7ea0 *R/SPC.R
+9655cfabf001726d08a6e2a31c519edb *data/Hugging.rda
+f94eebf56b0f78ea62c1f8315249aaff *data/PSA.rda
+5d122f50ee636b48273f3759631e90ce *man/Hugging.Rd
+65f21e5bb3e031d6b346f54479e008aa *man/OPC.Rd
+430de496f37aa6b9228c5e365aaf0e1a *man/PC.Rd
+dc698bd727b3a18be922bb7f087c7bfb *man/PSA.Rd
+0f14a831b45393e93ce6308caeb40ca4 *man/SOPC.Rd
+017faa2b35376c17097bdf422bb10e4f *man/SPC.Rd
+646bf0c3791f7e3514b4894e411a8829 *tests/testthat.R
+d34d57f82ae1e156fb594850d28fc2ff *tests/testthat/test-SOPC.R
