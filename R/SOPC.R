@@ -30,7 +30,7 @@ iter1=iter1+1
 Xcenter<-t(X[i,])           
 Sd<-((i-1)/i)*Sd+(1/i)*t(Xcenter)%*%Xcenter 
 lambda<-eigen(Sd)$values  
-spc<-spca(Sd,K=m,type="Gram",max.iter=5,sparse="penalty",trace=FALSE,para=paras) 
+spc<-spca(Sd,K=m,type="Gram",max.iter=0,sparse="penalty",trace=FALSE,para=paras) 
 V<-spc$loadings    
 }
 lambda2<-lambda[1:m]

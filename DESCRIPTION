@@ -1,7 +1,7 @@
 Package: SOPC
 Title: The Sparse Online Principal Component Estimation Algorithm
-Date: 2021-09-17
-Version: 0.0.1
+Date: 2022-04-04
+Version: 0.0.2
 Authors@R: c(person("Guangbao", "Guo",role = c("aut", "cre"),
            email = "ggb11111111@163.com",
            comment =  c(ORCID = " ")),
@@ -16,11 +16,11 @@ Imports: elasticnet, stats
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2021-09-17 01:39:49 UTC; Administrator
+Packaged: 2022-04-04 05:04:37 UTC; Administrator
 Author: Guangbao Guo [aut, cre],
   Chunjie Wei [aut],
   Guoqi Qian [aut]
 Maintainer: Guangbao Guo <ggb11111111@163.com>
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2021-09-17 08:10:07 UTC
+Date/Publication: 2022-04-04 05:30:02 UTC

@@ -1,15 +1,15 @@
-#' The online principal component method refers to the IPC method with the best performance among the IPC, the PPC and the SAPC methods.
+#' The perturbation principal components can handle data sets that are updated in real time and streaming data.
 #'
 #' @param data is a highly correlated online data set
 #' @param m is the number of principal component 
 #' @param eta is the proportion of online data to total data
 #'
-#' @return Ao,Do
+#' @return Ap,Dp
 #' @export
 #'
 #' @examples
-#' OPC(data=PSA,m=3,eta=0.8) 
-OPC<-function(data,m,eta){
+#' PPC(data=PSA,m=3,eta=0.8) 
+PPC<-function(data,m,eta){
 X<-as.matrix(scale(data))
 S<-cov(X)   
 n<-nrow(X)          
@@ -37,13 +37,13 @@ V<-(cbind(V,h/hmao)%*%eig2$vectors)[,1:m]
 Xbar<-((i-1)/i)*Xbar+(1/i)*X[i,]   
 }
 V2<-V[,1:m]
-Ao<-matrix(0,nrow=p,ncol=m)
+Ap<-matrix(0,nrow=p,ncol=m)
 for (j in 1:m){
-  Ao[,j]<-sqrt(lambda[j])*V2[,j]
+  Ap[,j]<-sqrt(lambda[j])*V2[,j]
   } 
-h2<-diag(Ao%*%t(Ao))
-Do<-diag(S-h2) 
-return(list(Ao=Ao,Do=Do))
+h2<-diag(Ap%*%t(Ap))
+Dp<-diag(S-h2) 
+return(list(Ap=Ap,Dp=Dp))
 }
 
 

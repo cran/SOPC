@@ -2,7 +2,7 @@
 % Please edit documentation in R/OPC.R
 \name{OPC}
 \alias{OPC}
-\title{The online principal components can handle data sets that are updated in real time and streaming data.}
+\title{The online principal component method refers to the IPC method with the best performance among the IPC, the PPC and the SAPC methods.}
 \usage{
 OPC(data, m, eta)
 }
@@ -17,7 +17,7 @@ OPC(data, m, eta)
 Ao,Do
 }
 \description{
-The online principal components can handle data sets that are updated in real time and streaming data.
+The online principal component method refers to the IPC method with the best performance among the IPC, the PPC and the SAPC methods.
 }
 \examples{
 OPC(data=PSA,m=3,eta=0.8) 
