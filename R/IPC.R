@@ -1,4 +1,4 @@
-#' The incremental principal components can handle data sets that are updated in real time and streaming data.
+#' The incremental principal component can handle online data sets with highly correlated.
 #'
 #' @param data is a highly correlated online data set
 #' @param m is the number of principal component 

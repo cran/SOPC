@@ -1,6 +1,6 @@
 #' The traditional principal component method. This method can estimate the eigen space of the data set.
 #'
-#' @param data is a set of highly correlated variables
+#' @param data is a highly correlated data set
 #' @param m is the number of principal component
 #'
 #' @return Ahat, Dhat

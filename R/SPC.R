@@ -1,6 +1,6 @@
 #' The sparse principal component can obtain sparse solutions of the eigenmatrix to better explain the relationship between principal components and original variables.
 #'
-#' @param data is a set of highly correlated variables 
+#' @param data is a highly correlated data set 
 #' @param m is the number of principal component
 #' @param gamma is a sparse parameter
 #'

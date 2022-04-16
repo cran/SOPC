@@ -1,4 +1,4 @@
-#' The perturbation principal components can handle data sets that are updated in real time and streaming data.
+#' The perturbation principal component can handle online data sets with highly correlated.
 #'
 #' @param data is a highly correlated online data set
 #' @param m is the number of principal component 
@@ -17,32 +17,37 @@ n0<-round(eta*n)
 p<-ncol(X)           
 Xbar<-colMeans(X[1:n0,])      
 eig1<-eigen(cov(X[1:n0,]-Xbar)) 
-lambda<-eig1$values[1:m]       
-V<-eig1$vectors[,1:m]      
-V1<-V
-T<-matrix(rep(0,(m+1)*(m+1)),nrow=(m+1))
+lambda<-eig1$values    
+V<-eig1$vectors    
+V1<-V[,1:m]
 
 for (i in (n0+1):n) {
-Xcenter<-t(X[i,]-Xbar)       
-g<-t(V)%*%t(Xcenter)  
-Xhat<-t(V%*%g)+Xbar          
-h<-t(X[i,]-Xhat)            
-hmao<-norm(h,"2")            
-gamma<-as.numeric(t(h/hmao)%*%t(Xcenter))   
-T[1:m,]<-cbind(((i-1)/i)*diag(lambda)+((i-1)^2/i^3)*g%*%t(g),((i-1)^2/i^3)*gamma*g)
-T[(m+1),]<-cbind(((i-1)^2/i^3)*gamma*t(g),((i-1)^2/i^3)*gamma^2)               
-eig2<-eigen(T)                
-lambda<-eig2$values[1:m]               
-V<-(cbind(V,h/hmao)%*%eig2$vectors)[,1:m]
+f<-1/i 
+Xcenter<-t(X[i,])                    
+lambda<-(1-f)*lambda       
+Q<-sqrt(f)*t((X[i,]-Xbar)%*%V)
+Q2<-Q*Q                      
+num<-tcrossprod(Q)              
+den<-matrix(lambda+Q2,p,p,byrow=T)-matrix(Q2+lambda,p,p)  # 
+U<-num/den       
+diag(U)<-1        
+V<-V%*%U      
+sigma2<-.colSums(V*V,p,p)
+lambda<-lambda*sigma2
+V<-V*rep.int(1/sqrt(sigma2),rep.int(p,p))
 Xbar<-((i-1)/i)*Xbar+(1/i)*X[i,]   
 }
+ind<-order(lambda,decreasing=T)    
+lambda<-lambda[ind]
+V<-V[,ind]
 V2<-V[,1:m]
+
 Ap<-matrix(0,nrow=p,ncol=m)
 for (j in 1:m){
   Ap[,j]<-sqrt(lambda[j])*V2[,j]
   } 
 h2<-diag(Ap%*%t(Ap))
-Dp<-diag(S-h2) 
+Dp<-diag(S-h2)  
 return(list(Ap=Ap,Dp=Dp))
 }
 

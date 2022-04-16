@@ -2,7 +2,7 @@
 % Please edit documentation in R/IPC.R
 \name{IPC}
 \alias{IPC}
-\title{The incremental principal components can handle data sets that are updated in real time and streaming data.}
+\title{The incremental principal component can handle online data sets with highly correlated.}
 \usage{
 IPC(data, m, eta)
 }
@@ -17,7 +17,7 @@ IPC(data, m, eta)
 Ai,Di
 }
 \description{
-The incremental principal components can handle data sets that are updated in real time and streaming data.
+The incremental principal component can handle online data sets with highly correlated.
 }
 \examples{
 IPC(data=PSA,m=3,eta=0.8) 

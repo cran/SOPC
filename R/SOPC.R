@@ -1,4 +1,4 @@
-#' The sparse online principal component can not only process the real-time updated data set and stream data set, but also obtain the sparse solution of the updated data set.
+#' The sparse online principal component can not only process online data sets, but also obtain a sparse solution of online data sets.
 #'
 #' @param data is a highly correlated online data set 
 #' @param m is the number of principal component 

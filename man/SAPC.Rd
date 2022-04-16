@@ -2,7 +2,7 @@
 % Please edit documentation in R/SAPC.R
 \name{SAPC}
 \alias{SAPC}
-\title{The stochastic approximation principal components can handle data sets that are updated in real time and streaming data.}
+\title{The stochastic approximation principal component can handle online data sets with highly correlated.}
 \usage{
 SAPC(data, m, eta)
 }
@@ -17,7 +17,7 @@ SAPC(data, m, eta)
 Asa,Dsa
 }
 \description{
-The stochastic approximation principal components can handle data sets that are updated in real time and streaming data.
+The stochastic approximation principal component can handle online data sets with highly correlated.
 }
 \examples{
 SAPC(data=PSA,m=3,eta=0.8) 

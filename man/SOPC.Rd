@@ -2,7 +2,7 @@
 % Please edit documentation in R/SOPC.R
 \name{SOPC}
 \alias{SOPC}
-\title{The sparse online principal component can not only process the real-time updated data set and stream data set, but also obtain the sparse solution of the updated data set.}
+\title{The sparse online principal component can not only process online data sets, but also obtain a sparse solution of online data sets.}
 \usage{
 SOPC(data, m, gamma, eta)
 }
@@ -19,7 +19,7 @@ SOPC(data, m, gamma, eta)
 Aso,Dso
 }
 \description{
-The sparse online principal component can not only process the real-time updated data set and stream data set, but also obtain the sparse solution of the updated data set.
+The sparse online principal component can not only process online data sets, but also obtain a sparse solution of online data sets.
 }
 \examples{
 SOPC(data=PSA,m=3,gamma=0.03,eta=0.6)

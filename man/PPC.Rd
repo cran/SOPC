@@ -2,7 +2,7 @@
 % Please edit documentation in R/PPC.R
 \name{PPC}
 \alias{PPC}
-\title{The perturbation principal components can handle data sets that are updated in real time and streaming data.}
+\title{The perturbation principal component can handle online data sets with highly correlated.}
 \usage{
 PPC(data, m, eta)
 }
@@ -17,7 +17,7 @@ PPC(data, m, eta)
 Ap,Dp
 }
 \description{
-The perturbation principal components can handle data sets that are updated in real time and streaming data.
+The perturbation principal component can handle online data sets with highly correlated.
 }
 \examples{
 PPC(data=PSA,m=3,eta=0.8) 

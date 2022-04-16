@@ -7,7 +7,7 @@
 PC(data, m = m)
 }
 \arguments{
-\item{data}{is a set of highly correlated variables}
+\item{data}{is a highly correlated data set}
 
 \item{m}{is the number of principal component}
 }
