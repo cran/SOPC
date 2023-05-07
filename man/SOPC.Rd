@@ -22,5 +22,6 @@ Aso,Dso
 The sparse online principal component can not only process online data sets, but also obtain a sparse solution of online data sets.
 }
 \examples{
-SOPC(data=PSA,m=3,gamma=0.03,eta=0.6)
+require(elasticnet)
+SOPC(PSA,3,0.03,0.6)
 }

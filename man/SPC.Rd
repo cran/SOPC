@@ -20,5 +20,6 @@ As,Ds
 The sparse principal component can obtain sparse solutions of the eigenmatrix to better explain the relationship between principal components and original variables.
 }
 \examples{
+require(elasticnet)
 SPC(data=PSA,m=3,gamma=0.03)
 }

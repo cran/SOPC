@@ -1,0 +1,23 @@
+Heart                   Heart failure
+Hugging                 Hugging
+IPC                     The incremental principal component can handle
+                        online data sets with highly correlated.
+OPC                     The online principal component method refers to
+                        the IPC method with the best performance among
+                        the IPC, the PPC and the SAPC methods.
+PC                      The traditional principal component method.
+                        This method can estimate the eigen space of the
+                        data set.
+PPC                     The perturbation principal component can handle
+                        online data sets with highly correlated.
+PSA                     Prostate Specific Antigen
+SAPC                    The stochastic approximation principal
+                        component can handle online data sets with
+                        highly correlated.
+SOPC                    The sparse online principal component can not
+                        only process online data sets, but also obtain
+                        a sparse solution of online data sets.
+SPC                     The sparse principal component can obtain
+                        sparse solutions of the eigenmatrix to better
+                        explain the relationship between principal
+                        components and original variables.
